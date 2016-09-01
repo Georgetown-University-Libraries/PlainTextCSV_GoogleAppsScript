@@ -7,7 +7,23 @@ For example
 `2016-04` is converted to a date `04/01/2016`
 
 ## Sample Screenshots
-https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript/releases/tag/v1.0.0
+### Web Service Landing Page
+
+![image](https://cloud.githubusercontent.com/assets/1111057/14503432/e8bfed3a-0164-11e6-9729-9d10e8c9799f.png)
+
+### Sample CSV Input
+
+Note the date fields that should not be auto-formatted.
+
+![image](https://cloud.githubusercontent.com/assets/1111057/14503446/f6a57e38-0164-11e6-8a01-d158a9024a46.png)
+
+### Sample Generated Google Sheet
+
+Note the preservation of the date strings in the resulting spreadsheet.
+
+![image](https://cloud.githubusercontent.com/assets/1111057/14503493/2d704a42-0165-11e6-8ba6-c622575a716b.png)
+
+
 
 ## Installation
 * Open Google Drive
