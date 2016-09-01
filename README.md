@@ -38,3 +38,7 @@ Note the preservation of the date strings in the resulting spreadsheet.
 
 ## StackOverflow Thread
 http://stackoverflow.com/questions/36605298/create-a-google-sheet-with-plain-text-cells-to-prevent-auto-format-of-strings
+
+***
+[![Georgetown University Library IT Code Repositories](https://raw.githubusercontent.com/Georgetown-University-Libraries/georgetown-university-libraries.github.io/master/LIT-logo-small.png)Georgetown University Library IT Code Repositories](http://georgetown-university-libraries.github.io/)
+
