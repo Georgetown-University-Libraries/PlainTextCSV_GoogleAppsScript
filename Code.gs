@@ -27,7 +27,8 @@ function getParam(obj, prop, defval) {
 function doPost(req) {
   var name = getParam(req.parameter, "name", "");
   var folderid = getParam(req.parameter, "folderid", "");
-  RESP = createPlainTextSpreadsheet(req.parameter.data, name, folderid);
+  var delim = getParam(req.parameter, "delim", ",");
+  RESP = createPlainTextSpreadsheet(req.parameter.data, name, folderid, delim);
   var temp = HtmlService.createTemplateFromFile('Response');
   return temp.evaluate().setSandboxMode(HtmlService.SandboxMode.IFRAME);
 }
@@ -37,7 +38,8 @@ function doPost(req) {
 function doTextPost(req) {
   var name = getParam(req, "name", "");
   var folderid = getParam(req, "folderid", "");
-  var resp = createPlainTextSpreadsheet(req.data, name, folderid);
+  var delim = getParam(req, "delim", ",");
+  var resp = createPlainTextSpreadsheet(req.data, name, folderid, delim);
   return JSON.stringify(resp);
 }
 
@@ -47,7 +49,8 @@ function processFile(form) {
   var blob = form.file;
   var name = getParam(form, "name", "");
   var folderid = getParam(form, "folderid", "");
-  var resp = createPlainTextSpreadsheet(blob.getDataAsString(), name, folderid);
+  var delim = getParam(form, "delim", ",");
+  var resp = createPlainTextSpreadsheet(blob.getDataAsString(), name, folderid, delim);
   return JSON.stringify(resp);
 }
 
@@ -57,8 +60,8 @@ function processFile(form) {
 //Text wrap will be enabled for all data cells
 //The header row will be highlighted and the columns will be auto-sized
 //Return a JSON object containing the name and URL of the new Google Sheet
-function createPlainTextSpreadsheet(data, name, folderid) {
-  var arr = Utilities.parseCsv(data);
+function createPlainTextSpreadsheet(data, name, folderid, delim) {
+  var arr = Utilities.parseCsv(data, delim);
   if (arr.length == 0) return "No data";
   
   var formattedDate = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd_HH:mm");
