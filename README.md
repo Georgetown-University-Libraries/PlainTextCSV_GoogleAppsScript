@@ -16,7 +16,7 @@ For example
 ## Sample Screenshots
 ### Web Service Landing Page
 
-![image](https://cloud.githubusercontent.com/assets/1111057/14503432/e8bfed3a-0164-11e6-9729-9d10e8c9799f.png)
+![image](Screenshot.jpg)
 
 ### Sample CSV Input
 
