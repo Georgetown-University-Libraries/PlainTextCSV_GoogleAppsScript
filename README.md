@@ -6,6 +6,13 @@ By default, both Excel and Google Sheets auto-format date and numeric fields on 
 For example
 `2016-04` is converted to a date `04/01/2016`
 
+# Source Project - Clone It For Yourself
+- [Google Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+  - Select "Make a Copy" to save an editable copy
+  - Click "Deploy as Webapp", set the run as parameters as appropriate to you
+  - Get the current web app URL
+  - Run the Web App to upload a CSV file
+
 ## Sample Screenshots
 ### Web Service Landing Page
 
