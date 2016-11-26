@@ -66,7 +66,7 @@ function createPlainTextSpreadsheet(data, name, folderid, delim) {
   
   var formattedDate = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd_HH:mm");
   var sheetname = (name == "") ? "import" : name;
-  var user = Session.getActiveUser().getEmail().replace("@georgetown.edu","");
+  var user = Session.getActiveUser().getEmail().replace("@.*$","");
   sheetname += "." + user + "." + formattedDate + ".csv";
   var spreadsheet = SpreadsheetApp.create(sheetname);
   

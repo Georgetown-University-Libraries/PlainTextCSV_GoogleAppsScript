@@ -16,7 +16,7 @@ For example
 ## Sample Screenshots
 ### Web Service Landing Page
 
-![image](Screenshot.jpg)
+![image](screenshots/Screenshot.jpg)
 
 ### Sample CSV Input
 
